@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PcAssistent - Servicios Computacionales</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">💻 PcAssistent</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Soluciones Rápidas y Profesionales</h1>
+      <p></p>
+      
+      <a href="#contacto" class="btn">Solicitar Servicio</a>
+    </div>
+  </section>
+
+  <section id="servicios" class="servicios">
+    <h2>¿Qué ofrezco?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🔧 Reparación de PC</h3>
+        <p>Formateo, limpieza de virus, recuperación de datos, reemplazo de piezas y más.</p>
+      </div>
+      <div class="card">
+        <h3>🛠 Mantenimiento Preventivo</h3>
+        <p>Optimización del sistema, limpieza interna y revisión de hardware.</p>
+      </div>
+      <div class="card">
+        <h3>💼 Asesorías Técnicas</h3>
+        <p>Te ayudamos a elegir el equipo ideal o a resolver problemas técnicos específicos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" class="nosotros">
+    <h2>¿Quién Soy?</h2>
+    <p>Técnico Informático con más de 10 años de experiencia, comprometido con brindar soluciones efectivas y personalizadas.</p>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <form onsubmit="enviarWhatsApp(); return false;">
+      <input type="text" id="nombre" placeholder="Tu nombre" required />
+      <input type="email" id="correo" placeholder="Correo electrónico" required />
+      <textarea id="mensaje" placeholder="Describe tu problema o consulta" required></textarea>
+      <button type="submit">Enviar por WhatsApp</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="redes">
+      <a href="https://wa.me/56996901209" target="_blank">WhatsApp</a> |
+      <a href="https://www.instagram.com/pcassitent/" target="_blank">Instagram</a> |
+      <a href="mailto:edovergara@outlook.com">Email</a>
+    </div>
+    <p>&copy; 2025 PcAssistent - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+  function enviarWhatsApp() {
+    const nombre = document.getElementById('nombre').value;
+    const correo = document.getElementById('correo').value;
+    const mensaje = document.getElementById('mensaje').value;
+    const telefono = "56996901209";
+    const texto = `Hola, mi nombre es ${nombre}. Mi correo es ${correo}. Necesito ayuda con: ${mensaje}`;
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+  }
+  </script>
+</body>
+</html>
